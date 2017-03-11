@@ -1,0 +1,212 @@
+body, html {
+  width: 100%; height: 100%;
+  margin: 0;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+  image-rendering:optimizeSpeed;
+  image-rendering:-moz-crisp-edges;
+  image-rendering:-o-crisp-edges;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:crisp-edges;
+  -ms-interpolation-mode:bicubic;
+  overflow: hidden;
+  z-index:-1;
+}
+
+#goalie{
+  left:564px;
+  top:250px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -188px -363px;
+  background-size:445%;
+  width: 120px;
+  height: 150px;
+}
+
+#goalieLeft{
+  left:356px;
+  top:271px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -34px -169px;
+  background-size:283%;
+  width: 200px;
+  height: 150px;
+}
+
+#goalieLeftUp{
+  left:315px;
+  top:143px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -34px -169px;
+  background-size:283%;
+  width: 200px;
+  height: 150px;
+}
+
+#goalieRight{
+  left:727px;
+  top:254px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -319px -84px;
+  background-size:264%;
+  width: 208px;
+  height: 104px;
+}
+
+#goalieRightUp{
+  left:758px;
+  top:143px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -319px -84px;
+  background-size:264%;
+  width: 208px;
+  height: 104px;
+}
+
+#goalieUp{
+  left:575px;
+  top:129px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -15px -266px;
+  background-size:422%;
+  width: 115px;
+  height: 207px;
+}
+
+#goalieMid{
+  left:566px;
+  top:220px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -187px -169px;
+  background-size:402%;
+  width: 118px;
+  height: 149px;
+}
+
+#goalieDown{
+  left:566px;
+  top:254px;
+  position: relative;
+  background-image: url(images/goalie.jpg);
+  background-position: -289px -322px;
+  background-size:348%;
+  width: 128px;
+  height: 104px;
+}
+
+#ball{
+  position:absolute;
+  background-color:white;
+  border-radius:50%;
+  height:66px;
+  width:66px;
+  left:566px;
+  top:500px;
+}
+
+.zone{
+  border:5px dotted red;
+}
+
+#zone1{
+  position:absolute;
+  height:67px;
+  width:204px;
+  left:293px;
+  top:130px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+#zone2{
+  position:absolute;
+  height:67px;
+  width:272px;
+  left:497px;
+  top:130px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+#zone3{
+  position:absolute;
+  height:67px;
+  width:204px;
+  left:769px;
+  top:130px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+
+#zone4{
+  position:absolute;
+  height:90px;
+  width:204px;
+  left:293px;
+  top:197px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+
+#zone5{
+  position:absolute;
+  height:90px;
+  width:272px;
+  left:497px;
+  top:197px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+#zone6{
+  position:absolute;
+  height:90px;
+  width:204px;
+  left:769px;
+  top:197px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+
+#zone7{
+  position:absolute;
+  height:67px;
+  width:204px;
+  left:293px;
+  top:287px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+
+#zone8{
+  position:absolute;
+  height:67px;
+  width:272px;
+  left:497px;
+  top:287px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
+#zone9{
+  position:absolute;
+  height:67px;
+  width:204px;
+  left:769px;
+  top:287px;
+  margin:0;
+  padding:0;
+  z-index:5;
+}
