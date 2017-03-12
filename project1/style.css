@@ -25,91 +25,84 @@ body, html {
   height: 150px;
 }
 
-#goalieLeft{
-  left:356px;
-  top:271px;
+#goalie1{
+  left:331px;
+  top:178px;
   position: relative;
   background-image: url(images/goalie.jpg);
   background-position: -34px -169px;
   background-size:283%;
   width: 200px;
   height: 150px;
+  animation: goalie .5s linear 1;
 }
 
-#goalieLeftUp{
-  left:315px;
-  top:143px;
-  position: relative;
-  background-image: url(images/goalie.jpg);
-  background-position: -34px -169px;
-  background-size:283%;
-  width: 200px;
-  height: 150px;
-}
-
-#goalieRight{
-  left:727px;
-  top:254px;
-  position: relative;
-  background-image: url(images/goalie.jpg);
-  background-position: -319px -84px;
-  background-size:264%;
-  width: 208px;
-  height: 104px;
-}
-
-#goalieRightUp{
-  left:758px;
-  top:143px;
-  position: relative;
-  background-image: url(images/goalie.jpg);
-  background-position: -319px -84px;
-  background-size:264%;
-  width: 208px;
-  height: 104px;
-}
-
-#goalieUp{
-  left:575px;
-  top:129px;
-  position: relative;
-  background-image: url(images/goalie.jpg);
-  background-position: -15px -266px;
-  background-size:422%;
-  width: 115px;
-  height: 207px;
-}
-
-#goalieMid{
+#goalie2{
   left:566px;
   top:220px;
   position: relative;
   background-image: url(images/goalie.jpg);
-  background-position: -187px -169px;
-  background-size:402%;
-  width: 118px;
-  height: 149px;
+  background-position: -435px -479px;
+  background-size:450%;
+  width: 144px;
+  height: 139px;
+  animation: goalie .5s linear 1;
 }
 
-#goalieDown{
-  left:566px;
-  top:254px;
+#goalie3{
+  left:751px;
+  top:210px;
   position: relative;
   background-image: url(images/goalie.jpg);
-  background-position: -289px -322px;
-  background-size:348%;
-  width: 128px;
+  background-position: -363px -84px;
+  background-size:288%;
+  width: 208px;
   height: 104px;
+  animation: goalie .5s linear 1;
 }
 
 #ball{
   position:absolute;
-  background-color:white;
+  background-color:orange;
   border-radius:50%;
   height:66px;
   width:66px;
   left:566px;
   top:500px;
+}
+
+#ball1{
+  position:absolute;
+  background-color:orange;
+  border-radius:50%;
+  height:66px;
+  width:66px;
+  left:315px;
+  top:155px;
+  z-index: 3;
+  animation: ball .5s linear 1;
+}
+
+#ball2{
+  position:absolute;
+  background-color:orange;
+  border-radius:50%;
+  height:66px;
+  width:66px;
+  left:630px;
+  top:300px;
+  animation: ball .5s linear 1;
+}
+
+#ball3{
+  position:absolute;
+  background-color:orange;
+  border-radius:50%;
+  height:66px;
+  width:66px;
+  left:900px;
+  top:250px;
+  animation: ball .5s linear 1;
 }
 
 .zone{
@@ -118,7 +111,7 @@ body, html {
 
 #zone1{
   position:absolute;
-  height:67px;
+  height:215px;
   width:204px;
   left:293px;
   top:130px;
@@ -128,7 +121,7 @@ body, html {
 }
 #zone2{
   position:absolute;
-  height:67px;
+  height:215px;
   width:272px;
   left:497px;
   top:130px;
@@ -138,7 +131,7 @@ body, html {
 }
 #zone3{
   position:absolute;
-  height:67px;
+  height:215px;
   width:204px;
   left:769px;
   top:130px;
@@ -147,66 +140,18 @@ body, html {
   z-index:5;
 }
 
-#zone4{
-  position:absolute;
-  height:90px;
-  width:204px;
-  left:293px;
-  top:197px;
-  margin:0;
-  padding:0;
-  z-index:5;
+@keyframes goalie{
+  0%{left:564px;
+    top:250px;'}
+  100%{ left:331px;
+        top:178px;}
 }
 
-#zone5{
-  position:absolute;
-  height:90px;
-  width:272px;
-  left:497px;
-  top:197px;
-  margin:0;
-  padding:0;
-  z-index:5;
-}
-#zone6{
-  position:absolute;
-  height:90px;
-  width:204px;
-  left:769px;
-  top:197px;
-  margin:0;
-  padding:0;
-  z-index:5;
+
+@keyframes ball{
+  0%{left:566px;
+    top:500px;'}
+  100%{left:315px;
+      top:155px;}
 }
 
-#zone7{
-  position:absolute;
-  height:67px;
-  width:204px;
-  left:293px;
-  top:287px;
-  margin:0;
-  padding:0;
-  z-index:5;
-}
-
-#zone8{
-  position:absolute;
-  height:67px;
-  width:272px;
-  left:497px;
-  top:287px;
-  margin:0;
-  padding:0;
-  z-index:5;
-}
-#zone9{
-  position:absolute;
-  height:67px;
-  width:204px;
-  left:769px;
-  top:287px;
-  margin:0;
-  padding:0;
-  z-index:5;
-}
