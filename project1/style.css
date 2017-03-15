@@ -70,34 +70,34 @@ body, html {
   position:absolute;
   background-color:orange;
   border-radius:50%;
-  height:66px;
-  width:66px;
+  height:50px;
+  width:50px;
   left:315px;
   top:155px;
   z-index: 3;
-  animation: ball .5s linear 1;
+  transition: ball .5s linear 1;
 }
 
 #ball2{
   position:absolute;
   background-color:orange;
   border-radius:50%;
-  height:66px;
-  width:66px;
+  height:50px;
+  width:50px;
   left:630px;
   top:300px;
-  animation: ball .5s linear 1;
+  transition: ball .5s linear 1;
 }
 
 #ball3{
   position:absolute;
   background-color:orange;
   border-radius:50%;
-  height:66px;
-  width:66px;
+  height:50px;
+  width:50px;
   left:900px;
   top:250px;
-  animation: ball .5s linear 1;
+  transition: ball .5s linear 1;
 }
 
 .zone{
@@ -147,13 +147,65 @@ body, html {
   z-index:5;
 }
 
+#scoreboard{
+  background:url(images/scoreboard.png);
+  background-size:contain;
+  border:5px solid black;
+  position:absolute;
+  height:160px;
+  width:300px;
+  left:50px;
+  bottom:50px;
+  margin:0;
+  padding:0;
+  z-index:5;
+  font-size: 50px
+}
+
+#homepoints{
+  position:absolute;
+  height:93px;
+  width:105px;
+  bottom:5px;
+  left:7px;
+  border:3px solid white;
+  color:red;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 80px;
+}
+
+#awaypoints{
+  position:absolute;
+  height:93px;
+  width:105px;
+  border:3px solid white;
+  bottom:5px;
+  right:5px;
+  color:red;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 80px;
+}
+
+#roundnum{
+  position:absolute;
+  height:28px;
+  width:34px;
+  border:3px solid white;
+  left:129px;
+  top: 76px;
+  color:red;
+  font-size: 25px;
+  text-align:center;
+}
+
 @keyframes goalie{
   0%{left:564px;
     top:250px;'}
   100%{ left:331px;
         top:178px;}
 }
-
 
 @keyframes ball{
   0%{left:566px;
@@ -163,16 +215,18 @@ body, html {
 }
 
 
-#scoreboard{
-  border:50px solid black;
-  position:absolute;
-  height:100px;
+
+#message{
+  position: absolute;
+  font-size:100px;
+  top:50%;
+  left:50%;
   width:100px;
-  left:497px;
-  top:300px;
-  margin:0;
-  padding:0;
-  z-index:5;
-  font-size:30px;
+  height:100px;
+  animation: move-right 3s linear infinite;
 }
 
+@keyframes move-right {
+  0%{transform:translateX(-1800%);}
+  100% {transform:translateX(1000%);}
+}

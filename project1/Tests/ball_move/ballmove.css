@@ -1,0 +1,22 @@
+body{
+	background-color:black;
+	margin-top: 500px;
+	/* transform: perspective(1200px) rotateX(45deg) rotateY(20deg); */
+}
+
+
+#mercury{
+	position: absolute;
+	top:50%;
+	left:50%;
+	border-radius: 50%;
+	width:66px;
+	height:66px;
+	background-color: orange;
+  transform-origin: 75px 75px;
+	animation: move-left 1s linear 1;
+}
+
+@keyframes move-left {
+  100% {transform: translateX(-200px) translateY(-200px);}
+}
