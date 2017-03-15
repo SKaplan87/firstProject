@@ -27,6 +27,8 @@ jQuery(function() {
     let homeScore=0;
     let awayScore=0;
     let turn=1;
+    let ball = $('.ball');
+
     $('#shotpower').hide();
 
 //borrowed logic from http://stackoverflow.com/questions/14586883/how-to-detect-a-long-press-on-a-div-in-jquery
@@ -43,6 +45,7 @@ jQuery(function() {
 
     $("#shotaccuracy").on('mouseup', function(e) {
       //stop accuracy bar
+      accuracyUp.remove();
         if ( new Date().getTime() <= ( startAcc + level1 )  )
         {
            alert('level 1!');
@@ -92,7 +95,7 @@ jQuery(function() {
     } );
 
     $( "#shotpower" ).on( 'mouseup', function( e ) {
-      //end power bar
+      powerUp.remove();
         if(new Date().getTime() <= ( startPow + level1 ))
         {
             alert('level 1!');
@@ -120,24 +123,25 @@ jQuery(function() {
         }
 
     zone=((((shotPow-1)*7)+1)+shotAcc)-1 //calculates what zone on the accuracy/power matrix
-    alert(zone)
+    // alert(zone)
+    moveBall(zone);
 
-    if (miss.includes(zone))
-    {
-      alert("Misses the net completely!");
-    }
-    else if (offPost.includes(zone))
-    {
-      alert("It goes off the post!");
-    }
-    else if (onTarget.includes(zone))
-    {
-      alert("The shot is on target");
-    }
-    else
-    {
-      alert("Woops, something went wrong");
-    }
+    // if (miss.includes(zone))
+    // {
+    //   alert("Misses the net completely!");
+    // }
+    // else if (offPost.includes(zone))
+    // {
+    //   alert("It goes off the post!");
+    // }
+    // else if (onTarget.includes(zone))
+    // {
+    //   alert("The shot is on target");
+    // }
+    // else
+    // {
+    //   alert("Woops, something went wrong");
+    // }
 
 if(isSaved(zone))
 {
@@ -163,6 +167,8 @@ else
   turn++;
   let round = Math.ceil(turn/2);
   roundNum.text(round);
+
+  setTimeout(reset,3000)
 
   if (turn>4) //tests if game should end
   {
@@ -218,6 +224,17 @@ else
     awayPoints.text(awayScore);
     roundNum.text(round);
   }
+
+  function reset()
+  {
+    ball.removeAttr('id');
+  }
+
+  function moveBall(zone)
+{
+  ball.attr('id','ball'+zone);
+}
+
 })
 
 

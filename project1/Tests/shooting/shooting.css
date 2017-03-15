@@ -78,7 +78,7 @@ body{
 }
 
 @keyframes accuracy{
-  100% {transform-origin:left;}
+  0% {transform-origin:left;}
   100% {transform: scaleX(450);}
 }
 
@@ -100,7 +100,7 @@ body{
   animation: power 3s linear 1;
 }
 @keyframes power {
-  100% {transform-origin:bottom;}
+  0% {transform-origin:bottom;}
   100% {transform: scaleY(200);}
 }
 
@@ -132,7 +132,7 @@ body{
 
 #goal{
     position:absolute;
-    border:10px solid black;
+    border:20px solid black;
     height:70%;
     width:60%;
     bottom:0%;
@@ -315,4 +315,227 @@ body{
 #zone35{
     bottom:80%;
     left:85.716%;
+}
+
+
+.ball{
+  position: absolute;
+  background:black;
+  bottom:50px;
+  left:590px;
+  height:60px;
+  width:60px;
+  border-radius: 50%;
+  background-color: black;
+}
+#ball1{
+    animation: ball1 1s linear 1 forwards;
+}
+@keyframes ball1 {
+  100% {transform: translateX(-450px) translateY(-350px);}
+}
+#ball2{
+    animation: ball2 1s linear 1 forwards;
+}
+@keyframes ball2 {
+  100% {transform: translateX(-330px) translateY(-110px);}
+}
+#ball3{
+    animation: ball3 1s linear 1 forwards;
+}
+@keyframes ball3 {
+  100% {transform: translateX(-220px) translateY(-115px);}
+}
+#ball4{
+    animation: ball4 1s linear 1 forwards;
+}
+@keyframes ball4 {
+  100% {transform: translateX(-70px) translateY(-115px);}
+}
+#ball5{
+
+    animation: ball5 1s linear 1 forwards;
+}
+@keyframes ball5 {
+  100% {transform: translateX(100px) translateY(-115px);}
+}
+#ball6{
+    animation: ball6 1s linear 1 forwards;
+}
+@keyframes ball6 {
+  100% {transform: translateX(225px) translateY(-115px);}
+}
+#ball7{
+    animation: ball7 1s linear 1 forwards;
+}
+@keyframes ball7 {
+  100% {transform: translateX(325px) translateY(-120px);}
+}
+#ball8{
+    animation: ball8 1s linear 1 forwards;
+}
+@keyframes ball8 {
+  100% {transform: translateX(325px) translateY(-120px);}
+}
+#ball9{
+    animation: ball9 1s linear 1 forwards;
+}
+@keyframes ball9 {
+  100% {transform: translateX(325px) translateY(-120px);}
+}
+#ball10{
+    animation: ball10 1s linear 1 forwards;
+}
+@keyframes ball10 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball11{
+    animation: ball11 1s linear 1 forwards;
+}
+@keyframes ball11 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball12{
+    animation: ball12 1s linear 1 forwards;
+}
+@keyframes ball12 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball13{
+    animation: ball13 1s linear 1 forwards;
+}
+@keyframes ball13 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball14{
+    animation: ball14 1s linear 1 forwards;
+}
+@keyframes ball14 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball15{
+    animation: ball15 1s linear 1 forwards;
+}
+@keyframes ball15 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball16{
+    animation: ball16 1s linear 1 forwards;
+}
+@keyframes ball16 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball17{
+    animation: ball17 1s linear 1 forwards;
+}
+@keyframes ball17 {
+  100% {transform: translateX(-260px) translateY(-260px);}
+}
+#ball18{
+    animation: ball18 1s linear 1 forwards;
+}
+@keyframes ball18 {
+  100% {transform: translateX(-150px) translateY(-260px);}
+}
+#ball19{
+    animation: ball19 1s linear 1 forwards;
+}
+@keyframes ball19 {
+  100% {transform: translateX(-150px) translateY(-260px);}
+}
+#ball20{
+    animation: ball20 1s linear 1 forwards;
+}
+@keyframes ball20 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball21{
+    animation: ball21 1s linear 1 forwards;
+}
+@keyframes ball21 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball22{
+    animation: ball22 1s linear 1 forwards;
+}
+@keyframes ball22 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball23{
+    animation: ball23 1s linear 1 forwards;
+}
+@keyframes ball23 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball24{
+    animation: ball24 1s linear 1 forwards;
+}
+@keyframes ball24 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball25{
+    animation: ball25 1s linear 1 forwards;
+}
+@keyframes ball25 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball26{
+    animation: ball26 1s linear 1 forwards;
+}
+@keyframes ball26 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball27{
+    animation: ball27 1s linear 1 forwards;
+}
+@keyframes ball27 {
+  100% {transform: translateX(-260px) translateY(-260px);}
+}
+#ball28{
+    animation: ball28 1s linear 1 forwards;
+}
+@keyframes ball28 {
+  100% {transform: translateX(-150px) translateY(-260px);}
+}
+#ball29{
+    animation: ball29 1s linear 1 forwards;
+}
+@keyframes ball29 {
+  100% {transform: translateX(-150px) translateY(-260px);}
+}
+#ball30{
+    animation: ball30 1s linear 1 forwards;
+}
+@keyframes ball30 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball31{
+    animation: ball31 1s linear 1 forwards;
+}
+@keyframes ball31 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball32{
+    animation: ball32 1s linear 1 forwards;
+}
+@keyframes ball32 {
+  100% {transform: translateX(150px) translateY(-170px);}
+}
+#ball33{
+    animation: ball33 1s linear 1 forwards;
+}
+@keyframes ball33 {
+  100% {transform: translateX(-250px) translateY(-170px);}
+}
+#ball34{
+    animation: ball34 1s linear 1 forwards;
+}
+@keyframes ball34 {
+  100% {transform: translateX(-50px) translateY(-170px);}
+}
+#ball35{
+    animation: ball35 1s linear 1 forwards;
+}
+@keyframes ball35 {
+  100% {transform: translateX(150px) translateY(-170px);}
 }
