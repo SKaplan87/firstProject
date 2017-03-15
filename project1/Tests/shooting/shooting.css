@@ -66,8 +66,20 @@ body{
   height:30px;
   bottom:300px;
   left:400px;
-  border-radius:10%;
   background:darkgray;
+}
+
+#accuracybar2{
+  position:relative;
+  width: 1px;
+  height:30px;
+  background:black;
+  animation: accuracy 3s linear 1;
+}
+
+@keyframes accuracy{
+  100% {transform-origin:left;}
+  100% {transform: scaleX(450);}
 }
 
 #powerbar{
@@ -76,9 +88,22 @@ body{
   height:200px;
   right:100px;
   top:100px;
-  border-radius:10%;
   background:darkgray;
 }
+
+#powerbar2{
+  position:absolute;
+  width:30px;
+  height:1px;
+  bottom:0;
+  background:black;
+  animation: power 3s linear 1;
+}
+@keyframes power {
+  100% {transform-origin:bottom;}
+  100% {transform: scaleY(200);}
+}
+
 .ball{
     position:absolute;
     background:black;

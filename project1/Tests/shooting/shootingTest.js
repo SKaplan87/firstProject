@@ -11,7 +11,11 @@ jQuery(function() {
     let onTarget=[3,4,5,10,11,12,17,18,19]
     let homePoints=$('#homepoints');
     let awayPoints=$('#awaypoints');
-    let roundNum=$('roundnum');
+    let roundNum=$('#roundnum');
+    let accuracybar=$('#accuracybar');
+    let powerbar=$('#powerbar');
+    let accuracyUp=$('<div id="accuracybar2"></div>');
+    let powerUp=$('<div id="powerbar2"></div>');
     homePoints.text("0");
     awayPoints.text("0");
     roundNum.text("1");
@@ -22,13 +26,14 @@ jQuery(function() {
     let shotPow=0;
     let homeScore=0;
     let awayScore=0;
-    let turn=0;
+    let turn=1;
     $('#shotpower').hide();
 
 //borrowed logic from http://stackoverflow.com/questions/14586883/how-to-detect-a-long-press-on-a-div-in-jquery
 //this is finding the actual physical time the button is clicked, then finding the actual time it is released, and finding the difference to calculate how long it was held.
     $("#shotaccuracy").on('mousedown', function(e) {//begin shot accuracy
         startAcc = new Date().getTime();
+        accuracybar.append(accuracyUp);
         //start accuracy bar
     } );
 
@@ -79,7 +84,7 @@ jQuery(function() {
 
     $( "#shotpower" ).on( 'mousedown', function( e ) { //begin shot power
         startPow = new Date().getTime();
-        //start power bar
+        powerbar.append(powerUp);
     } );
 
     $( "#shotpower" ).on( 'mouseleave', function( e ) {
@@ -155,12 +160,37 @@ else
 
   $('#shotaccuracy').show();
   $('#shotpower').hide();
+  turn++;
+  let round = Math.ceil(turn/2);
+  roundNum.text(round);
+
+  if (turn>4) //tests if game should end
+  {
+    if (homeScore>awayScore)
+    {
+      alert("The home team wins!")
+    }
+    else if (awayScore>homeScore)
+    {
+      alert("The away team wins!")
+    }
+    else
+    {
+      alert("Its a draw!")
+    }
+    scoreReset();
+  }
+
   //reset board. ball/goalie back to original location. power/accuracy bars empty
     } );
 
   function isSaved(zone)
   {
-
+    let totMiss=[1,2,6,7,8,9,13,14,15,16,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
+    if (totMiss.includes(zone))
+    {
+      return true;
+    }
     let save=Math.random()
     let probs=[[3,.0],[4,0],[5,.35],[10,.52],[11,.9],[12,.48],[17,.22],[18,.35],[19,.28]];
 
@@ -176,6 +206,17 @@ else
           {return false}
       }
     }
+  }
+
+  function scoreReset()
+  {
+    homeScore=0;
+    awayScore=0;
+    turn=0;
+    round=1;
+    homePoints.text(homeScore);
+    awayPoints.text(awayScore);
+    roundNum.text(round);
   }
 })
 
