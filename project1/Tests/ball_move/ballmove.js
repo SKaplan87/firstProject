@@ -9,7 +9,7 @@ function moveBall(zone)
 }
 
 moveBall(2);
-
+})
   // let zone1 = $('#zone1');
   // let zone2 = $('#zone2');
   // let zone3 = $('#zone3');
@@ -50,7 +50,7 @@ moveBall(2);
 //   ball.removeAttr('id')
 // },4000);
 
-})
+
 
 // zone1.on("click",function(){
 //   ball.attr('id','ball1');
