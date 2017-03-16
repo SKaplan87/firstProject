@@ -1,4 +1,5 @@
 jQuery(function() {
+
     let level1 = 500;
     let level2 = 1000;
     let level3 = 1500;
@@ -31,8 +32,8 @@ jQuery(function() {
 
     $('#shotpower').hide();
 
-//borrowed logic from http://stackoverflow.com/questions/14586883/how-to-detect-a-long-press-on-a-div-in-jquery
-//this is finding the actual physical time the button is clicked, then finding the actual time it is released, and finding the difference to calculate how long it was held.
+// borrowed logic from http://stackoverflow.com/questions/14586883/how-to-detect-a-long-press-on-a-div-in-jquery
+// this is finding the actual physical time the button is clicked, then finding the actual time it is released, and finding the difference to calculate how long it was held.
     $("#shotaccuracy").on('mousedown', function(e) {//begin shot accuracy
         startAcc = new Date().getTime();
         accuracybar.append(accuracyUp);
@@ -48,37 +49,37 @@ jQuery(function() {
       accuracyUp.remove();
         if ( new Date().getTime() <= ( startAcc + level1 )  )
         {
-           alert('level 1!');
+           // alert('level 1!');
            shotAcc=1;
         }
         else if(new Date().getTime() <= ( startAcc + level2 ))
         {
-            alert('level 2!');
+            // alert('level 2!');
             shotAcc=2;
         }
         else if(new Date().getTime() <= ( startAcc + level3 ))
         {
-            alert('level 3!');
+            // alert('level 3!');
             shotAcc=3;
         }
         else if(new Date().getTime() <= ( startAcc + level4 ))
         {
-            alert('level 4!');
+            // alert('level 4!');
             shotAcc=4;
         }
         else if(new Date().getTime() <= ( startAcc + level5 ))
         {
-            alert('level 5!');
+            // alert('level 5!');
             shotAcc=5;
         }
         else if(new Date().getTime() <= ( startAcc + level6 ))
         {
-            alert('level 6!');
+            // alert('level 6!');
             shotAcc=6;
         }
         else
         {
-            alert('level 7!');
+            // alert('level 7!');
             shotAcc=7;
         }
         $('#shotaccuracy').hide();
@@ -98,32 +99,32 @@ jQuery(function() {
       powerUp.remove();
         if(new Date().getTime() <= ( startPow + level1 ))
         {
-            alert('level 1!');
+            // alert('level 1!');
             shotPow=1;
         }
         else if(new Date().getTime() <= ( startPow + level2 ))
         {
-            alert('level 2!');
+            // alert('level 2!');
             shotPow=2;
         }
         else if(new Date().getTime() <= ( startPow + level3 ))
         {
-            alert('level 3!');
+            // alert('level 3!');
             shotPow=3;
         }
         else if(new Date().getTime() <= ( startPow + level4 ))
         {
-            alert('level 4!');
+            // alert('level 4!');
             shotPow=4;
         }
         else
         {
-         alert('level 5!');
+         // alert('level 5!');
           shotPow=5;
         }
 
     zone=((((shotPow-1)*7)+1)+shotAcc)-1 //calculates what zone on the accuracy/power matrix
-    // alert(zone)
+    alert(zone)
     moveBall(zone);
 
     // if (miss.includes(zone))
