@@ -7,6 +7,21 @@ body{
   left:565px;
   bottom:200px;
 }
+
+#messagebox{
+  background:black;
+/*  border:5px solid yellow;*/
+  font-size:25px;
+  text-align: center;
+  color:green;
+  position:absolute;
+  height:150px;
+  width:290px;
+  right:75px;
+  bottom:50px;
+  margin:0;
+  padding:10px;
+}
 #scoreboard{
   background:url(../images/scoreboard.png);
   background-size:contain;
@@ -88,8 +103,8 @@ body{
   width:30px;
   height:200px;
   border-bottom-radius: 50%;
-  right:100px;
-  top:100px;
+  right:325px;
+  top:75px;
   background:darkgray;
 }
 
@@ -182,7 +197,7 @@ body{
 {
   position:absolute;
   top:-100px;
-  right:20px;
+  right:-60px;
 }
 
 

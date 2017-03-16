@@ -38,7 +38,6 @@
     $("#shotaccuracy").on('mousedown', function(e) {//begin shot accuracy
         startAcc = new Date().getTime();
         accuracybar.append(accuracyUp);
-        //start accuracy bar
     } );
 
     $("#shotaccuracy").on('mouseleave', function(e) {
@@ -46,7 +45,6 @@
     } );
 
     $("#shotaccuracy").on('mouseup', function(e) {
-      //stop accuracy bar
       accuracyUp.remove();
         if ( new Date().getTime() <= ( startAcc + level1 )  )
         {
@@ -85,6 +83,10 @@
         }
         $('#shotaccuracy').hide();
         $('#shotpower').show(); //switches button view
+        if (turn===1)
+        {
+          $('#messagebox').text("Hold down the 'Shot Power' button. The longer you hold, the higher your shot!")
+        }
     } );
 
     $( "#shotpower" ).on( 'mousedown', function( e ) { //begin shot power
@@ -130,11 +132,22 @@
 
     if(isSaved(zone))
 {
-  console.log("SAVED!");
+  if (miss.includes(zone))
+  {
+    $('#messagebox').text("He misses the goal entirely!")
+  }
+  else if (offPost.includes(zone))
+  {
+    $('#messagebox').text("It hits the post! So close, but no goal!")
+  }
+  else
+  {
+    $('#messagebox').text("The goalie stops it! What a save!!!!!!")
+  }
 }
 else
 {
-  console.log("GOAL!");
+  $('#messagebox').text(" GOAL!! GOAL!! GOAL!! GOAL!! GOAL!!")
   if(turn%2===1)
   {
      homeScore++;
@@ -153,23 +166,23 @@ else
   let round = Math.ceil(turn/2);
   roundNum.text(round);
 
-  setTimeout(reset,3000)
+  setTimeout(reset,3000);
 
-  if (turn>4) //tests if game should end
+  if (turn>2) //tests if game should end
   {
     if (homeScore>awayScore)
     {
-      alert("The home team wins!")
+      $('#messagebox').text("The Ninja Turtles win the game!");
     }
     else if (awayScore>homeScore)
     {
-      alert("The away team wins!")
+      $('#messagebox').text("The bad guys get the victory!");
     }
     else
     {
-      alert("Its a draw!")
+      $('#messagebox').text("Its a draw! Nobody wins...")
     }
-    scoreReset();
+    setTimeout(scoreReset,5000);
   }
 
   //reset board. ball/goalie back to original location. power/accuracy bars empty
