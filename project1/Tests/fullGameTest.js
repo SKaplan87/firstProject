@@ -1,12 +1,12 @@
 // jQuery(function() {
 
-    let level1 = 500;
-    let level2 = 1000;
-    let level3 = 1500;
-    let level4 = 2000;
-    let level5 = 2500;
-    let level6 = 3000;
-    let level7 = 3500;
+    let level1 = 400;
+    let level2 = 600;
+    let level3 = 1100;
+    let level4 = 1700;
+    let level5 = 2200;
+    let level6 = 2400;
+    let level7 = 3000;
     let miss=[1,7,8,14,15,21,22,28,29,30,31,32,33,34,35];
     let offPost=[2,6,9,13,16,20,23,24,25,26,27];
     let onTarget=[3,4,5,10,11,12,17,18,19]
@@ -17,7 +17,8 @@
     let powerbar=$('#powerbar');
     let accuracyUp=$('<div id="accuracybar2"></div>');
     let powerUp=$('<div id="powerbar2"></div>');
-    let goalie=$('.goalie')
+    let leo=$('.leo')
+    let shred=$('.shred')
     homePoints.text("0");
     awayPoints.text("0");
     roundNum.text("1");
@@ -32,6 +33,7 @@
     let ball = $('.ball');
 
     $('#shotpower').hide();
+    leo.hide();
 
 // borrowed logic from http://stackoverflow.com/questions/14586883/how-to-detect-a-long-press-on-a-div-in-jquery
 // this is finding the actual physical time the button is clicked, then finding the actual time it is released, and finding the difference to calculate how long it was held.
@@ -164,11 +166,12 @@ else
   $('#shotpower').hide();
   turn++;
   let round = Math.ceil(turn/2);
+  if (round>5){round=5};
   roundNum.text(round);
 
-  setTimeout(reset,3000);
+  setTimeout(reset,1500);
 
-  if (turn>2) //tests if game should end
+  if (turn>10) //tests if game should end
   {
     if (homeScore>awayScore)
     {
@@ -185,7 +188,7 @@ else
     setTimeout(scoreReset,5000);
   }
 
-  //reset board. ball/goalie back to original location. power/accuracy bars empty
+
     } );
 
   function isSaved(zone)
@@ -212,10 +215,12 @@ else
     }
   }
 
-  function defense (zone, save)
+  function defense (zone, save,turn)
 {
   let totMiss=[1,2,6,7,8,9,13,14,15,16,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
-  let goalie = $('.goalie');
+  let leo = $('.leo');
+  let shred = $('.shred');
+
   let dive;
  if (totMiss.includes(zone))
   {
@@ -276,7 +281,9 @@ else
       }
     }
   }
-  goalie.attr('id','goalie'+dive)
+    shred.attr('id','shred'+dive);
+    leo.attr('id','leo'+dive);
+
 }
 
   function scoreReset()
@@ -293,7 +300,18 @@ else
   function reset()
   {
     ball.removeAttr('id');
-    goalie.removeAttr('id');
+    leo.removeAttr('id');
+    shred.removeAttr('id');
+    if (turn%2===1)
+    {
+      shred.show();
+      leo.hide();
+    }
+    else
+    {
+      leo.show();
+      shred.hide();
+    }
   }
 
   function moveBall(zone)
